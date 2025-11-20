@@ -5,23 +5,23 @@ const ProductShowcase = () => {
   const features = [
     {
       icon: Zap,
-      title: "High Caffeine Boost",
-      description: "Maximum energy when you need it most",
+      title: "30mg Caffeine per 100ml",
+      description: "Carefully calibrated to boost focus and energy levels",
     },
     {
       icon: Leaf,
-      title: "Sugar Free",
-      description: "Zero sugar, pure energy",
+      title: "Natural Ingredients",
+      description: "Carbonated water with natural flavoring agents",
     },
     {
       icon: Award,
-      title: "Mixed Fruit Flavor",
-      description: "Delicious taste, premium quality",
+      title: "0.40% Taurine",
+      description: "Supports mental alertness and physical endurance",
     },
     {
       icon: Flame,
-      title: "Packed with Vitamins",
-      description: "Essential nutrients for peak performance",
+      title: "B-Vitamin Complex",
+      description: "B3, B2, B6, and B12 for energy metabolism",
     },
   ];
 
@@ -45,9 +45,9 @@ const ProductShowcase = () => {
               RAOZI Energy Drink
             </h2>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Engineered for leaders, movers, and achievers. RAOZI delivers the perfect blend of 
-              energy, performance, and taste. Our premium formula is designed to fuel your ambitions 
-              and power your success.
+              Engineered for leaders, movers, and achievers. RAOZI delivers 37.20 kcal per 100ml 
+              with a powerful blend of taurine, caffeine, and essential B-vitamins. Our premium 
+              formula enhances mental alertness, supports cardiovascular health, and fuels peak performance.
             </p>
 
             {/* Features Grid */}

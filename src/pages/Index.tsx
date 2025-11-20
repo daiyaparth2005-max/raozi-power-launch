@@ -10,7 +10,7 @@ const Index = () => {
       <Header />
       <main className="pt-20">
         <Hero />
-        <ProductShowcase className="rounded-none" />
+        <ProductShowcase />
         <VideoSection />
         <BrandHighlights />
         <DistributorCTA />

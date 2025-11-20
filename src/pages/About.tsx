@@ -82,31 +82,93 @@ const About = () => {
         <section className="container mx-auto px-4 mt-20">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-black mb-8 text-center">What Makes RAOZI Powerful</h2>
-            <div className="bg-card p-8 rounded-2xl border border-border shadow-lg">
+            <div className="bg-card p-8 rounded-2xl border border-border shadow-lg space-y-8">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-accent">High Caffeine Content</h3>
+                  <h3 className="text-xl font-bold mb-2 text-accent">Taurine (0.40%)</h3>
                   <p className="text-muted-foreground">
-                    Optimized caffeine levels to provide sustained energy and focus without the crash.
+                    An amino acid that supports hydration, maintains electrolyte balance, and supports cardiovascular and muscular health. Enhances mental alertness and physical endurance.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-accent">Sugar-Free Formula</h3>
+                  <h3 className="text-xl font-bold mb-2 text-accent">Caffeine (0.03%)</h3>
                   <p className="text-muted-foreground">
-                    Zero sugar means pure energy without unnecessary calories or sugar crashes.
+                    A natural stimulant at 30mg per 100ml, carefully calibrated to improve focus and increase energy levels without overwhelming your system.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-accent">Essential Vitamins</h3>
+                  <h3 className="text-xl font-bold mb-2 text-accent">B-Vitamin Complex</h3>
                   <p className="text-muted-foreground">
-                    B-vitamins and essential nutrients to support peak physical and mental performance.
+                    <strong>Vitamin B3 (2.40mg)</strong> - Helps convert food into energy and supports the nervous system<br/>
+                    <strong>Vitamin B2 (0.20mg)</strong> - Essential for energy production and cellular function<br/>
+                    <strong>Vitamin B6 (0.40mg)</strong> - Vital for protein metabolism and neurotransmitter synthesis<br/>
+                    <strong>Vitamin B12 (0.20mcg)</strong> - Supports red blood cell production and nervous system health
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-accent">Premium Flavor</h3>
+                  <h3 className="text-xl font-bold mb-2 text-accent">Natural Ingredients</h3>
                   <p className="text-muted-foreground">
-                    Our mixed fruit flavor delivers a delicious taste experience that keeps you coming back.
+                    Carbonated water base with natural and nature-identical flavoring agents for a refreshing, invigorating experience.
                   </p>
+                </div>
+              </div>
+
+              {/* Nutritional Information Table */}
+              <div className="pt-6 border-t border-border">
+                <h3 className="text-2xl font-bold mb-4 text-center">Nutritional Information (Per 100ml)</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left">
+                    <tbody className="divide-y divide-border">
+                      <tr className="hover:bg-muted/50">
+                        <td className="py-3 px-4 font-semibold">Energy</td>
+                        <td className="py-3 px-4">37.20 kcal</td>
+                      </tr>
+                      <tr className="hover:bg-muted/50">
+                        <td className="py-3 px-4 font-semibold">Total Carbohydrates</td>
+                        <td className="py-3 px-4">9.30g (of which sugars: 9.30g)</td>
+                      </tr>
+                      <tr className="hover:bg-muted/50">
+                        <td className="py-3 px-4 font-semibold">Protein</td>
+                        <td className="py-3 px-4">&lt; 0.60g</td>
+                      </tr>
+                      <tr className="hover:bg-muted/50">
+                        <td className="py-3 px-4 font-semibold">Total Fat</td>
+                        <td className="py-3 px-4">&lt; 0.30g</td>
+                      </tr>
+                      <tr className="hover:bg-muted/50">
+                        <td className="py-3 px-4 font-semibold">Taurine</td>
+                        <td className="py-3 px-4">400mg</td>
+                      </tr>
+                      <tr className="hover:bg-muted/50">
+                        <td className="py-3 px-4 font-semibold">Caffeine</td>
+                        <td className="py-3 px-4">30mg</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* Usage Warnings */}
+              <div className="pt-6 border-t border-border">
+                <h3 className="text-xl font-bold mb-3 text-accent">Important Information</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <div>
+                    <p className="font-semibold mb-1">Not Recommended For:</p>
+                    <ul className="list-disc list-inside ml-2 space-y-1">
+                      <li>Children</li>
+                      <li>Pregnant or lactating women</li>
+                      <li>Individuals sensitive to caffeine</li>
+                    </ul>
+                  </div>
+                  <p><strong>Consumption Limit:</strong> Do not consume more than 500ml per day</p>
+                  <div>
+                    <p className="font-semibold mb-1">Storage Instructions:</p>
+                    <ul className="list-disc list-inside ml-2 space-y-1">
+                      <li>Store in a cool, dry place</li>
+                      <li>Keep away from direct sunlight</li>
+                      <li>Keep out of reach of children</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

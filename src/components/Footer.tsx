@@ -1,9 +1,7 @@
 import { Mail, Phone, Instagram, Facebook } from "lucide-react";
 import logoEmblem from "@/assets/logo-emblem.png";
-
 const Footer = () => {
-  return (
-    <footer className="bg-primary text-primary-foreground pt-16 pb-8">
+  return <footer className="bg-primary text-primary-foreground pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
@@ -19,19 +17,13 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <div className="space-y-3">
-              <a
-                href="mailto:support@raozi.com"
-                className="flex items-center gap-3 text-white/80 hover:text-accent transition-colors"
-              >
+              <a href="mailto:support@raozi.com" className="flex items-center gap-3 text-white/80 hover:text-accent transition-colors">
                 <Mail className="w-5 h-5" />
                 <span>support@raozi.com</span>
               </a>
-              <a
-                href="tel:+1234567890"
-                className="flex items-center gap-3 text-white/80 hover:text-accent transition-colors"
-              >
+              <a href="tel:+1234567890" className="flex items-center gap-3 text-white/80 hover:text-accent transition-colors">
                 <Phone className="w-5 h-5" />
-                <span>+1 (234) 567-890</span>
+                <span>+91 78500 65293</span>
               </a>
             </div>
           </div>
@@ -40,20 +32,10 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
             <div className="flex gap-4">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white/10 hover:bg-accent rounded-lg transition-all hover:scale-110"
-              >
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-accent rounded-lg transition-all hover:scale-110">
                 <Instagram className="w-6 h-6" />
               </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white/10 hover:bg-accent rounded-lg transition-all hover:scale-110"
-              >
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-accent rounded-lg transition-all hover:scale-110">
                 <Facebook className="w-6 h-6" />
               </a>
             </div>
@@ -65,8 +47,6 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} RAOZI Energy Drink. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

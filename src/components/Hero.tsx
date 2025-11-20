@@ -51,7 +51,7 @@ const Hero = () => {
               </Button>
             </Link>
             <Link to="/distributor">
-              <Button size="lg" variant="outline" className="border-2 border-white hover:bg-white font-bold text-lg px-8 py-6 rounded-lg shadow-2xl hover:scale-105 transition-all text-gray-900">
+              <Button size="lg" variant="outline" className="border-2 border-white font-bold text-lg px-8 py-6 rounded-lg shadow-2xl hover:scale-105 transition-all bg-[#ee5b2b] text-slate-50">
                 Become a Distributor
               </Button>
             </Link>

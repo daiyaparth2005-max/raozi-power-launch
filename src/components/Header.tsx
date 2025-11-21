@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoText from "@/assets/logo-text.png";
+import logoMain from "@/assets/logo-main.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [{
@@ -22,7 +22,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 text-zinc-950">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center transition-transform hover:scale-105">
-            <img alt="RAOZI Energy Drink" className="h-10 md:h-12" src="/lovable-uploads/05f8f76d-8b50-40f7-abb3-80427423c511.jpg" />
+            <img alt="RAOZI Energy Drink" className="h-10 md:h-12" src={logoMain} />
           </Link>
 
           {/* Desktop Navigation */}

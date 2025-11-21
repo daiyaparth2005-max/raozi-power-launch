@@ -30,8 +30,8 @@ const Footer = () => {
 
           {/* Social */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-            <div className="flex gap-4">
+            <h3 className="text-xl font-bold mb-4 text-center">Follow Us</h3>
+            <div className="gap-4 items-start justify-center flex flex-row">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-accent rounded-lg transition-all hover:scale-110">
                 <Instagram className="w-6 h-6" />
               </a>

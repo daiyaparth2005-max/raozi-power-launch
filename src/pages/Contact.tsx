@@ -73,7 +73,7 @@ const Contact = () => {
                     <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} className="mt-2" />
                   </div>
                   <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90 text-white font-bold">
-                    Send Message
+                    +91 78500 65293                                                                                                                                   
                   </Button>
                 </form>
               </div>

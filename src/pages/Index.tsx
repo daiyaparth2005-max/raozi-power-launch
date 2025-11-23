@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProductShowcase from "@/components/ProductShowcase";
+import EnergyDrinks from "@/components/EnergyDrinks";
 import VideoSection from "@/components/VideoSection";
 import BrandHighlights from "@/components/BrandHighlights";
 import ComingSoon from "@/components/ComingSoon";
@@ -12,6 +13,7 @@ const Index = () => {
       <main className="pt-20">
         <Hero />
         <ProductShowcase />
+        <EnergyDrinks />
         <VideoSection />
         <BrandHighlights />
         <ComingSoon />

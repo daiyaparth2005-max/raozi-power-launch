@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ProductShowcase from "@/components/ProductShowcase";
 import VideoSection from "@/components/VideoSection";
 import BrandHighlights from "@/components/BrandHighlights";
+import ComingSoon from "@/components/ComingSoon";
 import DistributorCTA from "@/components/DistributorCTA";
 import Footer from "@/components/Footer";
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
         <ProductShowcase />
         <VideoSection />
         <BrandHighlights />
+        <ComingSoon />
         <DistributorCTA />
       </main>
       <Footer />

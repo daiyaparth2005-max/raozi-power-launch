@@ -36,22 +36,32 @@ All colors MUST be HSL.
     --input: 220 20% 88%;
     --ring: 220 70% 15%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Brand colors */
+    /* Brand colors - Enhanced */
     --brand-navy: 220 70% 15%;
     --brand-orange: 15 85% 55%;
+    --brand-fire: 12 88% 58%;
+    --brand-electric: 45 100% 60%;
     --brand-blue: 210 100% 50%;
+    --brand-purple: 280 65% 60%;
+    --brand-cyan: 190 85% 55%;
     --brand-light: 0 0% 98%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220, 70%, 15%) 0%, hsl(220, 50%, 25%) 50%, hsl(15, 85%, 55%) 100%);
-    --gradient-fire: linear-gradient(180deg, hsl(15, 85%, 55%) 0%, hsl(30, 80%, 50%) 50%, hsl(220, 70%, 15%) 100%);
-    --gradient-energy: linear-gradient(90deg, hsl(15, 85%, 55%), hsl(30, 80%, 50%), hsl(45, 90%, 55%));
+    /* Gradients - More Creative */
+    --gradient-hero: linear-gradient(135deg, hsl(220, 70%, 15%) 0%, hsl(280, 65%, 35%) 30%, hsl(15, 85%, 55%) 70%, hsl(45, 100%, 60%) 100%);
+    --gradient-fire: linear-gradient(180deg, hsl(12, 88%, 58%) 0%, hsl(15, 85%, 55%) 30%, hsl(30, 80%, 50%) 60%, hsl(45, 90%, 55%) 100%);
+    --gradient-energy: linear-gradient(90deg, hsl(15, 85%, 55%), hsl(30, 80%, 50%), hsl(45, 100%, 60%), hsl(12, 88%, 58%));
+    --gradient-electric: linear-gradient(120deg, hsl(190, 85%, 55%) 0%, hsl(210, 100%, 50%) 50%, hsl(280, 65%, 60%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(280, 65%, 60%) 0%, hsl(12, 88%, 58%) 50%, hsl(45, 100%, 60%) 100%);
+    --gradient-aurora: linear-gradient(135deg, hsl(190, 85%, 55%) 0%, hsl(280, 65%, 60%) 50%, hsl(15, 85%, 55%) 100%);
     
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsla(15, 85%, 55%, 0.3);
+    /* Shadows - More Dynamic */
+    --shadow-glow: 0 0 40px hsla(15, 85%, 55%, 0.4);
+    --shadow-glow-strong: 0 0 60px hsla(15, 85%, 55%, 0.6);
+    --shadow-electric: 0 0 40px hsla(45, 100%, 60%, 0.4);
     --shadow-strong: 0 20px 60px hsla(220, 70%, 15%, 0.4);
+    --shadow-colored: 0 10px 40px hsla(15, 85%, 55%, 0.3);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 220 70% 15%;
@@ -64,23 +74,23 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 220 70% 8%;
+    --background: 220 70% 5%;
     --foreground: 0 0% 98%;
 
-    --card: 220 60% 12%;
+    --card: 220 60% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 70% 10%;
+    --popover: 220 70% 8%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 15 85% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 50% 20%;
+    --secondary: 220 50% 18%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 50% 18%;
-    --muted-foreground: 210 20% 65%;
+    --muted: 220 50% 15%;
+    --muted-foreground: 210 20% 70%;
 
     --accent: 15 85% 55%;
     --accent-foreground: 0 0% 100%;
@@ -88,8 +98,8 @@ All colors MUST be HSL.
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 40% 22%;
-    --input: 220 40% 22%;
+    --border: 220 40% 20%;
+    --input: 220 40% 20%;
     --ring: 15 85% 55%;
 
     --sidebar-background: 220 65% 10%;

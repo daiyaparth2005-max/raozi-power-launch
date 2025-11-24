@@ -19,8 +19,8 @@ const Header = () => {
     name: "Contact",
     path: "/contact"
   }];
-  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4 py-4 text-zinc-950">
+  return <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-[0_4px_20px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(238,91,43,0.1)]">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center transition-transform hover:scale-105">
             <img alt="RAOZI Energy Drink" className="h-10 md:h-12" src={logoMain} />

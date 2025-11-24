@@ -60,7 +60,11 @@ export default {
         brand: {
           navy: "hsl(var(--brand-navy))",
           orange: "hsl(var(--brand-orange))",
+          fire: "hsl(var(--brand-fire))",
+          electric: "hsl(var(--brand-electric))",
           blue: "hsl(var(--brand-blue))",
+          purple: "hsl(var(--brand-purple))",
+          cyan: "hsl(var(--brand-cyan))",
           light: "hsl(var(--brand-light))",
         },
       },
@@ -98,6 +102,22 @@ export default {
           "0%": { transform: "translateX(-100%)", opacity: "0" },
           "100%": { transform: "translateX(0)", opacity: "1" },
         },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "bounce-slow": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "rotate-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -105,11 +125,18 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         "slide-in": "slide-in 0.5s ease-out",
+        "shimmer": "shimmer 3s linear infinite",
+        "bounce-slow": "bounce-slow 2s ease-in-out infinite",
+        "rotate-slow": "rotate-slow 20s linear infinite",
+        "fade-in": "fade-in 0.6s ease-out",
       },
       backgroundImage: {
         "gradient-hero": "var(--gradient-hero)",
         "gradient-fire": "var(--gradient-fire)",
         "gradient-energy": "var(--gradient-energy)",
+        "gradient-electric": "var(--gradient-electric)",
+        "gradient-sunset": "var(--gradient-sunset)",
+        "gradient-aurora": "var(--gradient-aurora)",
       },
     },
   },

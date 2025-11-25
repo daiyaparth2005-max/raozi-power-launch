@@ -52,7 +52,7 @@ const Hero = () => {
               </Button>
             </Link>
             <Link to="/distributor">
-              <Button size="lg" className="relative overflow-hidden bg-gradient-to-r from-brand-purple via-brand-cyan to-brand-purple bg-[length:200%_100%] hover:bg-[position:right_center] text-white font-bold text-lg px-8 py-6 rounded-xl shadow-[0_0_30px_rgba(130,90,220,0.5)] hover:shadow-[0_0_50px_rgba(130,90,220,0.8)] hover:scale-105 transition-all duration-300 border-2 border-brand-purple/50 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700">
+              <Button size="lg" className="relative overflow-hidden bg-gradient-to-r from-accent via-brand-fire to-accent bg-[length:200%_100%] hover:bg-[position:right_center] text-white font-bold text-lg px-8 py-6 rounded-xl shadow-[0_0_30px_rgba(238,91,43,0.5)] hover:shadow-[0_0_50px_rgba(238,91,43,0.8)] hover:scale-105 transition-all duration-300 animate-shimmer before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700">
                 Become a Distributor
               </Button>
             </Link>

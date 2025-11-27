@@ -12,7 +12,7 @@ const Index = () => {
       <Header />
       <main className="pt-20">
         <Hero />
-        <ProductShowcase className="my-0 py-0" />
+        <ProductShowcase />
         <EnergyDrinks />
         <VideoSection />
         <BrandHighlights />

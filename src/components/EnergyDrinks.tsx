@@ -1,6 +1,7 @@
 import { useState } from "react";
 import raozicans from "@/assets/raozi-cans.png";
 import raozipremium from "@/assets/raozi-premium.png";
+import raozimineralwater from "@/assets/raozi-mineral-water.jpg";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -20,6 +21,12 @@ const EnergyDrinks = () => {
     size: "250 ML",
     image: raozipremium,
     position: "object-center"
+  }, {
+    name: "RAOZI Mineral Water",
+    variant: "Pure Life",
+    size: "500 ML",
+    image: raozimineralwater,
+    position: "object-center"
   }];
   return <section ref={ref} className={`relative py-24 bg-gradient-to-b from-background via-card/20 to-background overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
       {/* Animated background elements */}
@@ -31,14 +38,14 @@ const EnergyDrinks = () => {
       <div className="container mx-auto relative z-10 py-0 px-[3px]">
         <div className="text-center mb-16 animate-fade-in border-8 py-0">
           <h2 className="text-5xl md:text-6xl mb-4 bg-gradient-to-r from-foreground via-accent to-brand-fire bg-clip-text text-transparent text-center font-sans font-extrabold px-0 my-0 py-[9px]">
-            Energy Drinks
+            Our Products
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto py-0">
             Premium energy solutions crafted for excellence
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
           {drinks.map((drink, index) => (
             <Dialog key={index} open={selectedDrink === index} onOpenChange={(open) => setSelectedDrink(open ? index : null)}>
               <DialogTrigger asChild>

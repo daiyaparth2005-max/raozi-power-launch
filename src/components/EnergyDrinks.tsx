@@ -119,25 +119,53 @@ const EnergyDrinks = () => {
 
                       <div className="space-y-4 pt-4">
                         <div className="p-4 rounded-xl bg-gradient-to-r from-card/80 to-card/60 border border-border/50 backdrop-blur-sm">
-                          <h3 className="font-bold text-lg mb-2 text-accent">Additional info</h3>
+                          <h3 className="font-bold text-lg mb-2 text-accent">
+                            {index === 2 ? "Additional info" : "Key Features"}
+                          </h3>
                           <ul className="space-y-2 text-muted-foreground">
-                            <li className="flex items-start gap-2">
-                              <span className="text-accent mt-1">●</span>
-                              <span>Also available in 250/500 ML
-                          </span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <span className="text-accent mt-1">●</span>
-                              <span>Store in a cool dry & hygienic place</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <span className="text-accent mt-1">●</span>
-                              <span>Keep the container away from direct sunlight</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <span className="text-accent mt-1">●</span>
-                              <span>Premium quality</span>
-                            </li>
+                            {index === 2 ? (
+                              <>
+                                <li className="flex items-start gap-2">
+                                  <span className="text-accent mt-1">●</span>
+                                  <span>Also available in 250/500 ML</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <span className="text-accent mt-1">●</span>
+                                  <span>Store in a cool dry & hygienic place</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <span className="text-accent mt-1">●</span>
+                                  <span>Keep the container away from direct sunlight</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <span className="text-accent mt-1">●</span>
+                                  <span>Premium quality</span>
+                                </li>
+                              </>
+                            ) : (
+                              <>
+                                <li className="flex items-start gap-2">
+                                  <span className="text-accent mt-1">●</span>
+                                  <span>30mg Caffeine per 100ml</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <span className="text-accent mt-1">●</span>
+                                  <span>0.40% Taurine</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <span className="text-accent mt-1">●</span>
+                                  <span>B-Vitamin Complex</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <span className="text-accent mt-1">●</span>
+                                  <span>Natural Ingredients</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                  <span className="text-accent mt-1">●</span>
+                                  <span>37.20 kcal per 100ml</span>
+                                </li>
+                              </>
+                            )}
                           </ul>
                         </div>
                       </div>

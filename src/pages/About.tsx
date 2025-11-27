@@ -2,33 +2,25 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Target, Users, Award, Zap } from "lucide-react";
 import productDark from "@/assets/product-dark.png";
-
 const About = () => {
-  const values = [
-    {
-      icon: Target,
-      title: "Mission",
-      description: "To empower leaders and achievers with premium energy solutions that fuel success.",
-    },
-    {
-      icon: Users,
-      title: "Community",
-      description: "Building a network of ambitious individuals who strive for excellence.",
-    },
-    {
-      icon: Award,
-      title: "Quality",
-      description: "Uncompromising standards in every can we produce.",
-    },
-    {
-      icon: Zap,
-      title: "Innovation",
-      description: "Constantly evolving to deliver the best energy experience.",
-    },
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const values = [{
+    icon: Target,
+    title: "Mission",
+    description: "To empower leaders and achievers with premium energy solutions that fuel success."
+  }, {
+    icon: Users,
+    title: "Community",
+    description: "Building a network of ambitious individuals who strive for excellence."
+  }, {
+    icon: Award,
+    title: "Quality",
+    description: "Uncompromising standards in every can we produce."
+  }, {
+    icon: Zap,
+    title: "Innovation",
+    description: "Constantly evolving to deliver the best energy experience."
+  }];
+  return <div className="min-h-screen">
       <Header />
       <main className="pt-32 pb-20">
         {/* Hero Section */}
@@ -54,14 +46,12 @@ const About = () => {
                 without compromise.
               </p>
             </div>
-            <div className="relative animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div style={{
+            animationDelay: '200ms'
+          }} className="relative animate-fade-in px-0 mx-0 py-[74px] my-0">
               <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-brand-fire/20 to-brand-electric/30 blur-3xl rounded-full animate-pulse-glow" />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-gradient-to-br from-brand-purple/20 to-brand-cyan/20 blur-2xl rounded-full animate-rotate-slow" />
-              <img
-                src={productDark}
-                alt="RAOZI Energy Drink"
-                className="relative z-10 w-full max-w-md mx-auto animate-float drop-shadow-2xl hover:scale-105 transition-transform duration-500"
-              />
+              <img src={productDark} alt="RAOZI Energy Drink" className="relative z-10 w-full max-w-md mx-auto animate-float drop-shadow-2xl hover:scale-105 transition-transform duration-500 rounded-3xl object-fill" />
             </div>
           </div>
         </section>
@@ -84,20 +74,16 @@ const About = () => {
               </p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-              {values.map((value, index) => (
-                <div
-                  key={index}
-                  className="group p-8 bg-gradient-to-br from-card to-card/50 rounded-3xl border-2 border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-[0_0_40px_rgba(238,91,43,0.3)] hover:scale-105 backdrop-blur-sm animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
+              {values.map((value, index) => <div key={index} className="group p-8 bg-gradient-to-br from-card to-card/50 rounded-3xl border-2 border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-[0_0_40px_rgba(238,91,43,0.3)] hover:scale-105 backdrop-blur-sm animate-fade-in" style={{
+              animationDelay: `${index * 100}ms`
+            }}>
                   <div className="relative mb-6">
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-brand-electric/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                     <value.icon className="w-14 h-14 text-accent group-hover:text-brand-fire relative z-10 group-hover:scale-110 transition-all duration-300 drop-shadow-[0_0_8px_rgba(238,91,43,0.5)]" strokeWidth={2.5} />
                   </div>
                   <h3 className="text-2xl font-black mb-3 text-foreground group-hover:text-accent transition-colors">{value.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -139,9 +125,9 @@ const About = () => {
                     B-Vitamin Complex
                   </h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    <strong>Vitamin B3 (2.40mg)</strong> - Helps convert food into energy and supports the nervous system<br/>
-                    <strong>Vitamin B2 (0.20mg)</strong> - Essential for energy production and cellular function<br/>
-                    <strong>Vitamin B6 (0.40mg)</strong> - Vital for protein metabolism and neurotransmitter synthesis<br/>
+                    <strong>Vitamin B3 (2.40mg)</strong> - Helps convert food into energy and supports the nervous system<br />
+                    <strong>Vitamin B2 (0.20mg)</strong> - Essential for energy production and cellular function<br />
+                    <strong>Vitamin B6 (0.40mg)</strong> - Vital for protein metabolism and neurotransmitter synthesis<br />
                     <strong>Vitamin B12 (0.20mcg)</strong> - Supports red blood cell production and nervous system health
                   </p>
                 </div>
@@ -224,8 +210,6 @@ const About = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;

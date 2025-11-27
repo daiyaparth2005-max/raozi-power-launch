@@ -140,11 +140,6 @@ const EnergyDrinks = () => {
                             </li>
                           </ul>
                         </div>
-
-                        <div className="p-4 rounded-xl bg-gradient-to-r from-card/80 to-card/60 border border-border/50 backdrop-blur-sm">
-                          <h3 className="font-bold text-lg mb-2 text-brand-fire">Nutritional Info</h3>
-                          <p className="text-muted-foreground">37.20 kcal per 100ml</p>
-                        </div>
                       </div>
                     </div>
                   </div>

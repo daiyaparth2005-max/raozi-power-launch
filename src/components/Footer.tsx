@@ -32,7 +32,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-center">Follow Us</h3>
             <div className="gap-4 items-start justify-center flex flex-row">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-accent rounded-lg transition-all hover:scale-110">
+              <a href="https://www.instagram.com/raozienergy/" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-accent rounded-lg transition-all hover:scale-110">
                 <Instagram className="w-6 h-6" />
               </a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-white/10 hover:bg-accent rounded-lg transition-all hover:scale-110">

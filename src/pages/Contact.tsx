@@ -7,7 +7,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const Contact = () => {
+  const headerRef = useScrollAnimation({ threshold: 0.2 });
+  const formRef = useScrollAnimation({ threshold: 0.2 });
+  const infoRef = useScrollAnimation({ threshold: 0.2 });
   const {
     toast
   } = useToast();
@@ -42,7 +47,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
-            <div className="relative text-center mb-20 overflow-hidden">
+            <div ref={headerRef.ref} className={`relative text-center mb-20 overflow-hidden transition-all duration-1000 ${headerRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
               {/* Animated background */}
               <div className="absolute inset-0 opacity-20 pointer-events-none">
                 <div className="absolute top-0 left-1/3 w-96 h-96 bg-gradient-to-br from-brand-fire/30 to-transparent rounded-full blur-3xl animate-pulse-glow" />
@@ -61,7 +66,7 @@ const Contact = () => {
 
             <div className="grid md:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="relative bg-gradient-to-br from-card to-card/50 p-10 rounded-3xl border-2 border-border/50 hover:border-accent/30 shadow-[0_0_40px_rgba(0,0,0,0.1)] hover:shadow-[0_0_60px_rgba(238,91,43,0.2)] transition-all duration-500 backdrop-blur-sm animate-fade-in">
+              <div ref={formRef.ref} className={`relative bg-gradient-to-br from-card to-card/50 p-10 rounded-3xl border-2 border-border/50 hover:border-accent/30 shadow-[0_0_40px_rgba(0,0,0,0.1)] hover:shadow-[0_0_60px_rgba(238,91,43,0.2)] transition-all duration-500 backdrop-blur-sm animate-fade-in ${formRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-brand-purple/5 rounded-3xl pointer-events-none" />
                 
@@ -94,7 +99,7 @@ const Contact = () => {
               </div>
 
               {/* Contact Info */}
-              <div className="space-y-8 animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <div ref={infoRef.ref} className={`space-y-8 animate-fade-in transition-all duration-1000 ${infoRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ animationDelay: '200ms' }}>
                 <div className="relative bg-gradient-to-br from-card to-card/50 p-10 rounded-3xl border-2 border-border/50 hover:border-accent/30 shadow-[0_0_40px_rgba(0,0,0,0.1)] hover:shadow-[0_0_60px_rgba(238,91,43,0.2)] transition-all duration-500 backdrop-blur-sm">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-brand-purple/5 rounded-3xl pointer-events-none" />
                   

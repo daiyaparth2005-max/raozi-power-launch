@@ -2,7 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Target, Users, Award, Zap } from "lucide-react";
 import productDark from "@/assets/product-dark.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const About = () => {
+  const heroRef = useScrollAnimation({ threshold: 0.2 });
+  const valuesRef = useScrollAnimation({ threshold: 0.2 });
+  const ingredientsRef = useScrollAnimation({ threshold: 0.2 });
   const values = [{
     icon: Target,
     title: "Mission",
@@ -24,7 +29,7 @@ const About = () => {
       <Header />
       <main className="pt-32 pb-20">
         {/* Hero Section */}
-        <section className="relative container mx-auto px-4 mb-24 overflow-hidden">
+        <section ref={heroRef.ref} className={`relative container mx-auto px-4 mb-24 overflow-hidden transition-all duration-1000 ${heroRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           {/* Animated background */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-to-br from-brand-fire/30 to-transparent rounded-full blur-3xl animate-pulse-glow" />
@@ -57,7 +62,7 @@ const About = () => {
         </section>
 
         {/* Values Section */}
-        <section className="relative py-20 bg-gradient-to-br from-muted/30 via-background to-muted/30 overflow-hidden">
+        <section ref={valuesRef.ref} className={`relative py-20 bg-gradient-to-br from-muted/30 via-background to-muted/30 overflow-hidden transition-all duration-1000 ${valuesRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           {/* Animated background */}
           <div className="absolute inset-0 opacity-20">
             <div className="absolute top-1/3 left-0 w-96 h-96 bg-gradient-to-br from-brand-electric/30 to-transparent rounded-full blur-3xl animate-pulse-glow" />
@@ -89,7 +94,7 @@ const About = () => {
         </section>
 
         {/* Ingredients Section */}
-        <section className="container mx-auto px-4 mt-24">
+        <section ref={ingredientsRef.ref} className={`container mx-auto px-4 mt-24 transition-all duration-1000 ${ingredientsRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           <div className="max-w-4xl mx-auto animate-fade-in">
             <div className="text-center mb-12">
               <h2 className="text-5xl md:text-6xl font-black mb-4 bg-gradient-to-r from-foreground via-accent to-brand-electric bg-clip-text text-transparent">

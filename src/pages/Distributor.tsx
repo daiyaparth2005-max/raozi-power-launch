@@ -8,7 +8,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { TrendingUp, Users, Target, Package, Handshake, BarChart } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import productSplash from "@/assets/product-splash.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const Distributor = () => {
+  const heroRef = useScrollAnimation({ threshold: 0.2 });
+  const benefitsRef = useScrollAnimation({ threshold: 0.2 });
+  const formRef = useScrollAnimation({ threshold: 0.2 });
   const {
     toast
   } = useToast();
@@ -70,7 +75,7 @@ const Distributor = () => {
       <Header />
       <main className="pt-32 pb-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-primary via-accent to-brand-fire text-white py-24 mb-24 overflow-hidden">
+        <section ref={heroRef.ref} className={`relative bg-gradient-to-br from-primary via-accent to-brand-fire text-white py-24 mb-24 overflow-hidden transition-all duration-1000 ${heroRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           {/* Animated background elements */}
           <div className="absolute inset-0 opacity-20">
             <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-white to-brand-electric rounded-full blur-3xl animate-pulse-glow" />
@@ -111,7 +116,7 @@ const Distributor = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="relative container mx-auto px-4 mb-24 overflow-hidden">
+        <section ref={benefitsRef.ref} className={`relative container mx-auto px-4 mb-24 overflow-hidden transition-all duration-1000 ${benefitsRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           {/* Animated background */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-brand-fire/30 to-transparent rounded-full blur-3xl animate-pulse-glow" />
@@ -141,7 +146,7 @@ const Distributor = () => {
         </section>
 
         {/* Application Form */}
-        <section className="container mx-auto px-4">
+        <section ref={formRef.ref} className={`container mx-auto px-4 transition-all duration-1000 ${formRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
           <div className="max-w-3xl mx-auto">
             <div className="relative bg-gradient-to-br from-card via-card/95 to-card/90 p-10 md:p-14 rounded-3xl border-2 border-border/50 hover:border-accent/30 shadow-[0_0_50px_rgba(0,0,0,0.1)] hover:shadow-[0_0_70px_rgba(238,91,43,0.2)] transition-all duration-500 backdrop-blur-sm animate-fade-in">
               {/* Gradient overlay */}

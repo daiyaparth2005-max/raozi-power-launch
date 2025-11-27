@@ -1,6 +1,10 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const VideoSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+  
   return (
-    <section className="relative py-24 bg-gradient-to-br from-muted/20 via-background to-muted/20 overflow-hidden">
+    <section ref={ref} className={`relative py-24 bg-gradient-to-br from-muted/20 via-background to-muted/20 overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
       {/* Animated background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-brand-purple/30 to-brand-cyan/30 rounded-full blur-3xl animate-pulse-glow" />

@@ -1,8 +1,11 @@
 import { Badge } from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const ComingSoon = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+  
   return (
-    <section className="py-20 bg-slate-900">
+    <section ref={ref} className={`py-20 bg-slate-900 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-5xl md:text-6xl font-black text-orange-600 mb-4">

@@ -16,7 +16,7 @@ const EnergyDrinks = () => {
     image: raozicans,
     position: "object-center"
   }, {
-    name: "RAOZI Premium",
+    name: "RAOZI\nGold",
     variant: "Mountain Edition",
     size: "250 ML",
     image: raozipremium,

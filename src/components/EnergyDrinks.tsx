@@ -3,9 +3,11 @@ import raozicans from "@/assets/raozi-cans.png";
 import raozipremium from "@/assets/raozi-premium.png";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { X } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const EnergyDrinks = () => {
   const [selectedDrink, setSelectedDrink] = useState<number | null>(null);
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
   const drinks = [{
     name: "RAOZI Classic",
     variant: "Original Energy",
@@ -19,7 +21,7 @@ const EnergyDrinks = () => {
     image: raozipremium,
     position: "object-center"
   }];
-  return <section className="relative py-24 bg-gradient-to-b from-background via-card/20 to-background overflow-hidden">
+  return <section ref={ref} className={`relative py-24 bg-gradient-to-b from-background via-card/20 to-background overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 right-1/3 w-96 h-96 bg-gradient-to-br from-brand-fire/30 to-transparent rounded-full blur-3xl animate-pulse-glow" />

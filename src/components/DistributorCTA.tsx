@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import { ArrowRight, TrendingUp, Users, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import productSpotlight from "@/assets/product-spotlight.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const DistributorCTA = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
   const benefits = [{
     icon: TrendingUp,
     title: "High Growth Market",
@@ -16,7 +19,7 @@ const DistributorCTA = () => {
     title: "Premium Margins",
     description: "Competitive pricing and profit opportunities"
   }];
-  return <section className="relative py-24 bg-gradient-to-br from-primary via-accent to-brand-fire overflow-hidden">
+  return <section ref={ref} className={`relative py-24 bg-gradient-to-br from-primary via-accent to-brand-fire overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-white to-brand-electric rounded-full blur-3xl animate-pulse-glow" />

@@ -1,6 +1,8 @@
 import { Zap, TrendingUp, Shield } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const BrandHighlights = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
   const highlights = [
     {
       icon: Zap,
@@ -26,7 +28,7 @@ const BrandHighlights = () => {
   ];
 
   return (
-    <section className="relative py-20 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden">
+    <section ref={ref} className={`relative py-20 bg-gradient-to-br from-background via-muted/30 to-background overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-brand-fire/20 to-transparent rounded-full blur-3xl animate-pulse-glow" />

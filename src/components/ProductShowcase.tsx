@@ -1,6 +1,9 @@
 import { Zap, Award, Leaf, Flame } from "lucide-react";
 import productClean from "@/assets/product-clean.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const ProductShowcase = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
   const features = [{
     icon: Zap,
     title: "30mg Caffeine per 100ml",
@@ -18,7 +21,7 @@ const ProductShowcase = () => {
     title: "B-Vitamin Complex",
     description: "B3, B2, B6, and B12 for energy metabolism"
   }];
-  return <section className="relative py-24 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden">
+  return <section ref={ref} className={`relative py-24 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
       {/* Animated background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-br from-brand-electric/30 to-transparent rounded-full blur-3xl animate-pulse-glow" />

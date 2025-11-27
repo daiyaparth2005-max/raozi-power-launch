@@ -22,7 +22,7 @@ const EnergyDrinks = () => {
     image: raozipremium,
     position: "object-center"
   }, {
-    name: "RAOZI  Water",
+    name: "RAOZI | Water |",
     variant: "Pure Life",
     size: "500 ML",
     image: raozimineralwater,

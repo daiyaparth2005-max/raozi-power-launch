@@ -1,9 +1,13 @@
 import { Zap, Award, Leaf, Flame } from "lucide-react";
 import productClean from "@/assets/product-clean.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
 const ProductShowcase = () => {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+  const {
+    ref,
+    isVisible
+  } = useScrollAnimation({
+    threshold: 0.2
+  });
   const features = [{
     icon: Zap,
     title: "30mg Caffeine per 100ml",
@@ -23,13 +27,13 @@ const ProductShowcase = () => {
   }];
   return <section ref={ref} className={`relative py-24 bg-gradient-to-br from-background via-muted/20 to-background overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
       {/* Animated background */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-20 my-[18px]">
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-gradient-to-br from-brand-electric/30 to-transparent rounded-full blur-3xl animate-pulse-glow" />
         <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gradient-to-br from-brand-purple/30 to-transparent rounded-full blur-3xl animate-pulse-glow animation-delay-1000" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto my-[51px] py-0">
           {/* Product Image */}
           <div className="relative animate-fade-in py-[84px] px-0 mx-0 my-[165px]">
             <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-brand-fire/20 to-brand-electric/30 blur-3xl rounded-full animate-pulse-glow" />

@@ -76,7 +76,7 @@ const DistributorCTA = () => {
           {/* Product Image */}
           <div style={{
           animationDelay: '300ms'
-        }} className="relative animate-fade-in mx-0 my-0 px-0 py-[112px]">
+        }} className="relative animate-fade-in mx-0 my-0 px-0 py-12">
             <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-brand-electric/30 to-brand-cyan/30 blur-3xl rounded-full animate-pulse-glow" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-gradient-to-br from-brand-purple/40 to-transparent blur-2xl rounded-full animate-rotate-slow" />
             <img src={productSpotlight} alt="Join RAOZI" className="relative z-10 w-full max-w-3xl mx-auto animate-float drop-shadow-2xl hover:scale-105 transition-transform duration-500 rounded-2xl border-none object-fill" />

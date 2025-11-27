@@ -24,7 +24,7 @@ const EnergyDrinks = () => {
   }, {
     name: "RAOZI\nWater",
     variant: "Pure Life",
-    size: "500 ML",
+    size: "1 L",
     image: raozimineralwater,
     position: "object-center"
   }];

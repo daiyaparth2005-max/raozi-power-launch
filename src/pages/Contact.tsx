@@ -8,11 +8,16 @@ import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
 const Contact = () => {
-  const headerRef = useScrollAnimation({ threshold: 0.2 });
-  const formRef = useScrollAnimation({ threshold: 0.2 });
-  const infoRef = useScrollAnimation({ threshold: 0.2 });
+  const headerRef = useScrollAnimation({
+    threshold: 0.2
+  });
+  const formRef = useScrollAnimation({
+    threshold: 0.2
+  });
+  const infoRef = useScrollAnimation({
+    threshold: 0.2
+  });
   const {
     toast
   } = useToast();
@@ -99,7 +104,9 @@ const Contact = () => {
               </div>
 
               {/* Contact Info */}
-              <div ref={infoRef.ref} className={`space-y-8 animate-fade-in transition-all duration-1000 ${infoRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{ animationDelay: '200ms' }}>
+              <div ref={infoRef.ref} className={`space-y-8 animate-fade-in transition-all duration-1000 ${infoRef.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`} style={{
+              animationDelay: '200ms'
+            }}>
                 <div className="relative bg-gradient-to-br from-card to-card/50 p-10 rounded-3xl border-2 border-border/50 hover:border-accent/30 shadow-[0_0_40px_rgba(0,0,0,0.1)] hover:shadow-[0_0_60px_rgba(238,91,43,0.2)] transition-all duration-500 backdrop-blur-sm">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-brand-purple/5 rounded-3xl pointer-events-none" />
                   
@@ -125,9 +132,8 @@ const Contact = () => {
                         </div>
                         <div>
                           <h3 className="font-black text-lg mb-2 text-foreground">Phone</h3>
-                          <a href="tel:+1234567890" className="text-muted-foreground hover:text-accent transition-colors text-lg">
-                            +91 78500                           
-                          </a>
+                          <a href="tel:+1234567890" className="text-muted-foreground hover:text-accent transition-colors text-lg">+91 9119144242
+                        </a>
                         </div>
                       </div>
                       <div className="flex items-start gap-5 group hover:translate-x-2 transition-transform duration-300">

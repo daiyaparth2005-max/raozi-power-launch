@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
   host: '::',
   port: 8080,
-  allowedHosts: ['raoz.in', 'www.raoz.in']
+  allowedHosts: ['raozi.in', 'www.raozi.in']
 },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
